@@ -13,15 +13,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Описание ==
 
-This plugin allows to authenticate users against OpenID Connect OAuth2 API with Authorization Code Flow.
-Once installed, it can be configured to automatically authenticate users (SSO), or provide a "Login with OpenID Connect"
-button on the login form. After consent has been obtained, an existing user is automatically logged into WordPress, while
-new users are created in WordPress database.
-
-Much of the documentation can be found on the Settings > OpenID Connect Generic dashboard page.
-
-Please submit issues to the Github repo: https://github.com/daggerhart/openid-connect-generic
-
 Этот плагин позволяет аутентифицировать пользователей с помощью OpenID Connect OAuth2 API с потоком кода авторизации.
 После установки его можно настроить для автоматической аутентификации пользователей (SSO) или предоставления «Вход с помощью RailID Connect»
 в форме входа в систему. После получения согласия существующий пользователь автоматически входит в WordPress, а новые пользователи создаются в базе данных WordPress.
