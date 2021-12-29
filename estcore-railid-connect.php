@@ -242,7 +242,6 @@ class RailID_Connect {
 	 * @return void
 	 */
 	public static function setup_cron_jobs() {
-    return;
 		if ( ! wp_next_scheduled( 'railid-connect-cron-daily' ) ) {
 			wp_schedule_event( time(), 'daily', 'railid-connect-cron-daily' );
 		}
@@ -252,15 +251,7 @@ class RailID_Connect {
 	 * Действия при активации плагина.
 	 * @return void
 	 */
-	public static function activation() {
-        
-    add_role( 'railid_registered_user', 'Зарегистрированный на RailID', array( 'railid_user_enabled' => true, 'railid_user_advanced' => false, 'railid_user_can_selfidentify' => true ) );
-    add_role( 'railid_advanced_user', 'Продвинутый участник RailID', array( 'railid_user_enabled' => true, 'railid_user_advanced' => true, 'railid_user_can_selfidentify' => true, ) );
-    add_role( 'railid_downgraded_user', 'Заблокированный на RailID', array( 'railid_user_enabled' => false, 'railid_user_advanced' => false, 'railid_user_identified' => false, 'user_can_selfidentify' => false ) );
-    add_role( 'railid_identified_user', 'Идентифицированный на RailID', array( 'railid_user_identified' => true, 'railid_user_can_selfidentify' => false ) );
-    
-    return;
-    
+	public static function activation() {   
 		self::setup_cron_jobs();
 	}
 
@@ -269,7 +260,6 @@ class RailID_Connect {
 	 * @return void
 	 */
 	public static function deactivation() {
-    return;
 		wp_clear_scheduled_hook( 'railid-connect-cron-daily' );
 	}
 
